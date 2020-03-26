@@ -11,7 +11,7 @@ while not validNumberOfParts:
         partsOfName = int(partsOfName)
         validNumberOfParts = True
     except:
-        print("You didn't enter a valid number.")
+        print("You didn't enter a valid number, yo.")
 
 for part in range(partsOfName):
     currentPartValid = False
@@ -26,7 +26,7 @@ for part in range(partsOfName):
                 currentNameLength = int(currentNameLength)
                 currentPartValid = True
         except:
-            print("You didn't enter a valid number")
+            print("You didn't enter a valid number, yo.")
     vowelOrConsonant = random.randint(0,1)
     i = 0
     while i < int(currentNameLength):
