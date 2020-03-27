@@ -9,7 +9,10 @@ while not validNumberOfParts:
     try:
         partsOfName = input("How many parts of the name do you want? ")
         partsOfName = int(partsOfName)
-        validNumberOfParts = True
+        if partsOfName > 100:
+            print("That's a lot of damage. Try less parts.")
+        else:
+            validNumberOfParts = True
     except:
         print("You didn't enter a valid number, yo.")
 
@@ -20,11 +23,17 @@ for part in range(partsOfName):
             if part == 0:
                 currentNameLength = input("How long do you want the first part of the name to be? ")
                 currentNameLength = int(currentNameLength)
-                currentPartValid = True
+                if currentNameLength > 100:
+                    print("That's a lot of damage. Try a shorter length.")
+                else:
+                    currentPartValid = True
             else:
                 currentNameLength = input("How long do you want the next part of the name to be? ")
                 currentNameLength = int(currentNameLength)
-                currentPartValid = True
+                if currentNameLength > 100:
+                    print("That's a lot of damage. Try a shorter length.")
+                else:
+                    currentPartValid = True
         except:
             print("You didn't enter a valid number, yo.")
     vowelOrConsonant = random.randint(0,1)
